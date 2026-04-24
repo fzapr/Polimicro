@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../assets/css/custom.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50" style="background:#faf8f5">
   <div id="app"></div>
   <div id="dosen-modal" class="fixed inset-0 z-50 hidden items-center justify-center modal-overlay">
     <div class="bg-white rounded-3xl shadow-2xl p-8 max-w-lg w-full mx-4 fade-in">
@@ -45,7 +45,7 @@
         </div>
         <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
           <div class="overflow-x-auto"><table class="w-full text-sm">
-            <thead><tr class="bg-gray-50"><th class="px-5 py-3 text-left font-semibold text-gray-600">Dosen</th><th class="px-5 py-3 text-left font-semibold text-gray-600">NIP</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Bidang</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Email</th><th class="px-5 py-3 text-center font-semibold text-gray-600">Matkul</th><th class="px-5 py-3 text-center font-semibold text-gray-600">Aksi</th></tr></thead>
+            <thead><tr class="bg-gray-50" style="background:#faf8f5"><th class="px-5 py-3 text-left font-semibold text-gray-600">Dosen</th><th class="px-5 py-3 text-left font-semibold text-gray-600">NIP</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Bidang</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Email</th><th class="px-5 py-3 text-center font-semibold text-gray-600">Matkul</th><th class="px-5 py-3 text-center font-semibold text-gray-600">Aksi</th></tr></thead>
             <tbody class="divide-y divide-gray-50">
               ${dosenList.map(d => {
                 const matkulCount = PoliData.getMatkulByDosen(d.id).length;

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../assets/css/custom.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50" style="background:#faf8f5">
   <div id="app"></div>
   <script src="../assets/js/data.js"></script><script src="../assets/js/auth.js"></script><script src="../assets/js/utils.js"></script><script src="../assets/js/sidebar.js"></script>
   <script>
@@ -43,7 +43,7 @@
       list.innerHTML = `<div class="bg-white rounded-2xl border border-gray-100 overflow-hidden">
         <div class="p-5 border-b border-gray-50 flex justify-between"><span class="font-bold text-gray-900">Daftar Mahasiswa</span><span class="text-sm text-gray-400">${students.length} data</span></div>
         <div class="overflow-x-auto"><table class="w-full text-sm">
-          <thead><tr class="bg-gray-50"><th class="px-5 py-3 text-left font-semibold text-gray-600">Nama</th><th class="px-5 py-3 text-left font-semibold text-gray-600">NIM</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Email</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Telepon</th><th class="px-5 py-3 text-center font-semibold text-gray-600">Status</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Prodi</th></tr></thead>
+          <thead><tr class="bg-gray-50" style="background:#faf8f5"><th class="px-5 py-3 text-left font-semibold text-gray-600">Nama</th><th class="px-5 py-3 text-left font-semibold text-gray-600">NIM</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Email</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Telepon</th><th class="px-5 py-3 text-center font-semibold text-gray-600">Status</th><th class="px-5 py-3 text-left font-semibold text-gray-600">Prodi</th></tr></thead>
           <tbody class="divide-y divide-gray-50">
             ${students.map(s => {
               const prodiNames = PoliData.getPendaftaranByMahasiswa(s.id).filter(p => p.status === 'diterima').map(p => { const pr = PoliData.getProdiById(p.prodi_id); return pr ? pr.nama : ''; }).join(', ');
